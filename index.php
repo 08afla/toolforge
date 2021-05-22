@@ -24,7 +24,7 @@
               <h4 class="card-title">مشارکت‌های آی‌پی</h4>
               <p class="card-text">
                 ابزار
-                <a href="supervisorycouncil.php">جستحوی مشارکت‌های آی‌پی، تنها بر اساس بخشی از آدرس
+                <a href="ipcontrib.php">جستجوی مشارکت‌های آی‌پی، تنها بر اساس بخشی از آدرس
               </p>
               <p class="card-text"><small class="text-muted">
                 <a href="https://github.com/08afla/toolforge">کد منبع</a> روی گیت‌هاب
@@ -34,9 +34,9 @@
           <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
           <div class="card mb-4 border-secondary" style="direction: ltr; text-align: left;">
             <div class="card-body">
-              <h4 class="card-title">Can't read Persian?</h4>
+              <h4 class="card-title">[EN]</h4>
               <p class="card-text">
-                My tools help Persian Wikipedia community members with vetting voter eligibility in various elections.
+                This tool searchs IP contributions by a partial address that does not  necesarily fit in */x subnet mask format
               </p>
               <p class="card-text"><small class="text-muted">
                 <a href="https://github.com/08afla/toolforge">Source code of tools</a> on GitHub

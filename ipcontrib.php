@@ -21,7 +21,7 @@ if ( isset( $_POST['username'] ) ) {
   $q->bind_result($actor_id, $actor_name);
   $q->fetch();
   if($username === '') {
-    $error = 'No username provided';
+    $error = 'No IP Portions provided';
   }
   elseif(!isset($actor_id)) {
     $error = 'User does not exist!';
@@ -83,31 +83,23 @@ if ( isset( $_POST['username'] ) ) {
     <div id="page-content-wrapper">
       <nav class="navbar navbar-expand-lg navbar-dark bg-secondary border-bottom">
         <div class="container">
-          <a class="navbar-brand" href="./">ابزارهای حجت</a>
+          <a class="navbar-brand" href="./">ابزارهای آلفا۸۰</a>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link disabled" href="#">&larr; هیئت نظارت</a>
+                <a class="nav-link disabled" href="#">&larr; مشارکت‌های آی‌پی</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       <div class="container">
-        <h1 class="mt-4">ارزیابی شرایط رأی‌مندی انتخابات هیئت نظارت</h1>
-        <p>این فرم به شما کمک می‌کند که وضعیت یک کاربر ویکی‌پدیای فارسی را از نظر برخورداری شرایط رأی‌مندی در <a href=
-        "https://fa.wikipedia.org/wiki/%D9%88%D9%BE:%D9%86%D8%A7%D8%B8%D8%B1%DB%B1%DB%B1">انتخابات دور یازدهم هیئت
-        نظارت</a> بررسی کنید.</p>
-        <p>شرایط لازم برای برخورداری از حق رأی (رأی‌مندی) در <a href=
-        "https://fa.wikipedia.org/wiki/%D9%88%D9%BE:%D8%B1%DA%AF%D9%87">اینجا</a> در دسترس هستند. این ابزار صرفاً برای
-        کمک به ارزیابی آن شرایط ساخته شده‌است و نباید به عنوان منبع اصلی تعریف شرایط رأی‌مندی در نظر گرفته شود. این
-        ابزار با راندن پرسمان‌هایی بر روی نسخهٔ کپی پایگاه دادهٔ ویکی‌مدیا (موسوم به Wikireplica Databases) اطلاعاتی را
-        که برای ارزیابی شرایط رأی‌مندی می‌تواند مفید باشد استخراج می‌کند. توجه کنید که هر پرسمان بین چند ثانیه تا چند
-        دقیقه طول می‌کشد و مدت آن برای کاربران قدیمی‌تر طولانی‌تر است.</p>
-        <form action="./supervisorycouncil.php" method="post">
+        <h1 class="mt-4">جستجوی مشارکت‌های آی‌پی</h1>
+        <p>این ابزار به شما کمک می‌کند که با دانستن تنها بخشی از آدرس آی‌پی مشارکت‌های وی را بررسی کنید </p>
+        <form action="./ipcontrib.php" method="post">
           <div class="form-group">
             <label for="username">نام کاربری</label> <input aria-describedby="usernameHelp" class="form-control" id=
-            "username" name="username" placeholder="نام کاربری را وارد کنید" type="text" value=
+            "username" name="username" placeholder="بخشی از آدرس آی‌پی را وارد کنید" type="text" value=
             "<?php echo $username; ?>"> <small class="form-text text-muted" id="usernameHelp">نیازی به پیشوند «کاربر:»
             نیست.</small>
           </div><button class="btn btn-primary" type="submit">ارسال</button>
