@@ -6,7 +6,7 @@
   <meta content="" name="description">
   <meta content="" name="author">
   <link href="" rel="icon">
-  <title>ابزارهای حجت</title>
+  <title>ابزارهای آلفا۸۰</title>
   <link href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body dir="rtl" style="direction:rtl">
@@ -14,36 +14,20 @@
     <div id="page-content-wrapper">
       <nav class="navbar navbar-expand-lg navbar-dark bg-secondary border-bottom">
         <div class="container">
-          <a class="navbar-brand" href="./">ابزارهای حجت</a>
+          <a class="navbar-brand" href="./">ابزارهای آلفا۸۰</a>
         </div>
       </nav>
       <div class="container" style="padding-top: 20pt">
         <div class="card-deck">
           <div class="card mb-4 border-primary">
             <div class="card-body">
-              <h4 class="card-title">انتخابات هیئت نظارت</h4>
+              <h4 class="card-title">مشارکت‌های آی‌پی</h4>
               <p class="card-text">
                 ابزار
-                <a href="supervisorycouncil.php">ارزیابی شرایط رأی‌مندی</a>
-                انتخابات هیئت نظارت سالانه به روز می‌شود.
+                <a href="supervisorycouncil.php">جستحوی مشارکت‌های آی‌پی، تنها بر اساس بخشی از آدرس
               </p>
               <p class="card-text"><small class="text-muted">
-                <a href="https://github.com/Huji/toolforge/blob/master/supervisorycouncil.php">کد منبع</a> روی گیت‌هاب
-              </small></p>
-            </div>
-          </div>
-          <div class="card mb-4 border-success">
-            <div class="card-body">
-              <h4 class="card-title">انتخابات ویکی‌بانی</h4>
-              <p class="card-text">
-                ابزار
-                <a href="eliminator.php">ارزیابی رأی‌دهندگان وپ:دوش</a>
-                بر اساس تغییرات در سیاست
-                وپ:بان
-                به روز می‌شود.
-              </p>
-              <p class="card-text"><small class="text-muted">
-                <a href="https://github.com/Huji/toolforge/blob/master/eliminator.php">کد منبع</a> روی گیت‌هاب
+                <a href="https://github.com/08afla/toolforge">کد منبع</a> روی گیت‌هاب
               </small></p>
             </div>
           </div>
@@ -55,7 +39,7 @@
                 My tools help Persian Wikipedia community members with vetting voter eligibility in various elections.
               </p>
               <p class="card-text"><small class="text-muted">
-                <a href="https://github.com/Huji/toolforge">Source code of tools</a> on GitHub
+                <a href="https://github.com/08afla/toolforge">Source code of tools</a> on GitHub
               </small></p>
             </div>
           </div>
