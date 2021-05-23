@@ -14,9 +14,54 @@ if ( isset( $_POST['username'] ) ) {
   $username = preg_replace($prefix, '', $username);
   $username = ucfirst(trim($username));
   
+
+
+
+//
+#######################################################################
+#	Configuration													  #
+#######################################################################
+$ip_parts   = $$username; #as int 192.51.181.1 or 2001:db8::3815
+$begin_date = '20210420';
+$end_date   = '20210425';
+$max_record = 31;
+$namespace  = 0; # for (main) article namespace use 0
+
+#######################################################################
+#	Pre-Execution													  #
+#######################################################################
+$SQL_SELECT_LIMIT = max_record;
+$ip_search = CONCAT('%', @ip_parts, '%');
+
+#######################################################################
+#	Execution														  #
+#######################################################################
+$stmt='SELECT a.actor_name as user,
+	   p.page_title as page,
+       r.rev_timestamp as timestamp,
+	   c.comment_text  as summary
+	FROM actor a										#Actor
+	INNER JOIN revision r 								#Revision
+      ON  r.rev_actor=a.actor_id
+      AND a.actor_user IS NULL 							#NULL for IP
+      AND r.rev_timestamp >= @begin_date 
+      AND r.rev_timestamp <= @end_date
+      AND a.actor_name like @ip_search
+	INNER JOIN  page p									#Page
+      ON  r.rev_page=p.page_id	
+      AND p.page_namespace = @namespace					
+	INNER JOIN  comment c								#Comment
+on c.comment_id=r.rev_comment_id'
+
+
+
+
+//
+
+
   $mysqli = new mysqli('fawiki.analytics.db.svc.eqiad.wmflabs', $ts_mycnf['user'], $ts_mycnf['password'], 'fawiki_p');
-  $q = $mysqli->prepare('SELECT actor_id, actor_name FROM actor WHERE actor_name=?');
-  $q->bind_param("s", $username);
+  $q = $mysqli->prepare($stmt);
+  $q->bind_param("sssss",  $ip_search  ,$begin_date,$end_date  ,$SQL_SELECT_LIMIT,$namespace );
   $q->execute();
   $q->bind_result($actor_id, $actor_name);
   $q->fetch();
